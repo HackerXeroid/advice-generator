@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  user-select: none;
+}
+
+:root {
+  --blur: 30px;
+  --shadow-color: #53ffac2a;
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+  background-color: #202632;
+  color: #cee3e9;
+  font-family: Manrope;
+  font-size: 2.8rem;
+  padding: 0 1.6rem;
+}
+
+.advice-generator {
+  margin: 12rem auto;
+  background-color: #313a49;
+  border-radius: 1rem;
+  padding: 3.8rem 2.6rem 6rem;
+  text-align: center;
+  position: relative;
+  max-width: 54rem;
+}
+
+.advice__title {
+  color: #53ffab;
+  font-size: 1.2rem;
+  font-weight: 800;
+  letter-spacing: 0.4rem;
+  margin-bottom: 3rem;
+}
+
+.advice__text {
+  margin-bottom: 2.5rem;
+}
+
+.advice__generate {
+  width: 6.5rem;
+  height: 6.5rem;
+  background-color: #53ffab;
+  border-radius: 50%;
+  /* Let's do it finally! Hoo! Hoo! 🥳 */
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  transition: 0.15s;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+.advice__generate:hover {
+  box-shadow: 1px 1px var(--blur) var(--shadow-color),
+    -1px 1px var(--blur) var(--shadow-color),
+    -1px -1px var(--blur) var(--shadow-color),
+    1px -1px var(--blur) var(--shadow-color);
+}
+
+.advice__separator .desktop {
+  display: none;
+}
+
+@media screen and (min-width: 505px) {
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .advice-generator {
+    margin-top: 0;
+  }
+
+  .advice__separator .mobile {
+    display: none;
+  }
+
+  .advice__separator .desktop {
+    display: inline-block;
+  }
+
+  .advice__title {
+    font-size: 1.4rem;
+  }
+
+  .advice__text {
+    font-size: 2.9rem;
+  }
+  
+}
